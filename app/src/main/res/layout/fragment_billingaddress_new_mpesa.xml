@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="0dp"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/llTop"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvTitle"
+                      android:visibility="gone"
+                      android:text="New MPESA billing address"
+                      android:textSize="8pt"
+                      android:textColor="#555454"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvSubTitle"
+                      android:text="Enter a valid safaricom number."
+                      android:textSize="5pt"
+                      android:textColor="#666666"/>
+        </LinearLayout>
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_below="@+id/llTop"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="vertical"
+                          android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        app:boxCornerRadiusTopStart="@dimen/itemRounds"
+                        app:boxCornerRadiusTopEnd="@dimen/itemRounds"
+                        app:boxCornerRadiusBottomStart="@dimen/itemRounds"
+                        app:boxCornerRadiusBottomEnd="@dimen/itemRounds"
+                        app:boxStrokeWidth="1dp"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/colorPrimary">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:helperText="Number"
+                            app:helperTextEnabled="true"
+                            android:hint="Number"
+                            android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        app:boxCornerRadiusTopStart="@dimen/itemRounds"
+                        app:boxCornerRadiusTopEnd="@dimen/itemRounds"
+                        app:boxCornerRadiusBottomStart="@dimen/itemRounds"
+                        app:boxCornerRadiusBottomEnd="@dimen/itemRounds"
+                        app:boxStrokeWidth="1dp"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:passwordToggleEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtAccName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:helperText="A/C Name"
+                            app:helperTextEnabled="true"
+                            android:hint="A/C Name"
+                            android:drawableRight="@drawable/ic_account_circle_black_24dp"
+                            android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:id="@+id/fbSaveBA"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/ic_cloud_done_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

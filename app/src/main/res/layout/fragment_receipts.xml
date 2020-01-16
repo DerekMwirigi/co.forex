@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:layout_marginBottom="50dp"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:id="@+id/llTop"
+                      android:orientation="vertical"
+                      android:layout_gravity="left"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvTitle"
+                      android:text="Receipts"
+                      android:textSize="8pt"
+                      android:textColor="#555454"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvSubTitle"
+                      android:text="All payments done for account #MA-043GG23."
+                      android:textSize="5.5pt"
+                      android:textColor="#666666"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_below="@+id/llTop"
+                      android:layout_marginTop="5dp"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+            <ScrollView android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="vertical"
+                              android:layout_height="match_parent">
+                    <View android:layout_width="wrap_content" android:layout_height="10dp"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:orientation="horizontal"
+                                  android:weightSum="4"
+                                  android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="6pt"
+                                  android:text="#"
+                                  android:layout_gravity="left"
+                                  android:gravity="left"
+                                  android:textAlignment="gravity"
+                                  android:textStyle="bold"
+                                  android:layout_weight="1"
+                                  android:layout_height="wrap_content"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="6pt"
+                                  android:text="Kes"
+                                  android:layout_gravity="left"
+                                  android:gravity="left"
+                                  android:textAlignment="gravity"
+                                  android:textStyle="bold"
+                                  android:layout_weight="1"
+                                  android:layout_height="wrap_content"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="6pt"
+                                  android:text="Description"
+                                  android:textStyle="bold"
+                                  android:textAlignment="gravity"
+                                  android:layout_gravity="left"
+                                  android:gravity="left"
+                                  android:layout_weight="1"
+                                  android:layout_height="wrap_content"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="6pt"
+                                  android:text="Date"
+                                  android:textAlignment="gravity"
+                                  android:layout_gravity="right"
+                                  android:gravity="right"
+                                  android:textStyle="bold"
+                                  android:layout_weight="1"
+                                  android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorPrimary"></View>
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvReceipts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:spanCount="1">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

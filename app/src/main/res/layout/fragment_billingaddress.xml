@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/llTop"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvTitle"
+                      android:text="Billing Addresses"
+                      android:textSize="8pt"
+                      android:textColor="#555454"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvSubTitle"
+                      android:text="Here are your billing addresses, click on + to add new."
+                      android:textSize="5.5pt"
+                      android:textColor="#666666"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_below="@+id/llTop"
+                      android:layout_marginTop="5dp"
+                      android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:weightSum="2"
+                          android:padding="2dp"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:id="@+id/tvIco"
+                          android:layout_weight="1"
+                          android:textAllCaps="true"
+                          android:text="Details"
+                          android:gravity="left"
+                          android:layout_gravity="left"
+                          android:textSize="6pt"
+                          android:layout_height="wrap_content"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_weight="1"
+                          android:gravity="right"
+                          android:textSize="6pt"
+                          android:text="Default"
+                          android:textAllCaps="true"
+                          android:layout_gravity="center"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorPrimary"></View>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBillingAddresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:spanCount="1">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:id="@+id/fbAddBA"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/ic_add_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

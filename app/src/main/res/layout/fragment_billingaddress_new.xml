@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:id="@+id/llTop"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvTitle"
+                      android:text="New billing address"
+                      android:textSize="8pt"
+                      android:textColor="#555454"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/tvSubTitle"
+                      android:text="Choose type of address and fill the details."
+                      android:textSize="5.5pt"
+                      android:textColor="#666666"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_below="@+id/llTop"
+                      android:layout_marginTop="5dp"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+                <com.google.android.material.chip.ChipGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        app:singleSelection="true"
+                        android:padding="0dp">
+                    <com.google.android.material.chip.Chip
+                            android:id="@+id/cpCard"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:chipIcon="@drawable/ic_check_black_24dp"
+                            android:textAlignment="center"
+                            android:text="CARD"/>
+                    <com.google.android.material.chip.Chip
+                            android:id="@+id/cpMpesa"
+                            style="@style/Widget.MaterialComponents.Chip.Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:padding="5dp"
+                            android:text="MPESA"/>
+                </com.google.android.material.chip.ChipGroup>
+                <LinearLayout android:layout_width="match_parent"
+                              android:id="@+id/llOption"
+                              android:orientation="vertical"
+                              android:layout_height="match_parent">
+                </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
