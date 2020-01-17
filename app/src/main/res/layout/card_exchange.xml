@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="?attr/selectableItemBackgroundBorderless">
+<LinearLayout android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:weightSum="4"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgCountry"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        android:padding="3dp"
+        android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+        android:id="@+id/tvCurrency"
+        android:textSize="7pt"
+        android:padding="3dp"
+        android:text="$USD"
+        android:textColor="@color/colorBeauty"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+        android:id="@+id/tvBuying"
+        android:textSize="7pt"
+        android:padding="3dp"
+        android:text="100"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+        android:id="@+id/tvSelling"
+        android:textSize="7pt"
+        android:padding="3dp"
+        android:text="120"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

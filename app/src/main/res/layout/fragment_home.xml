@@ -28,7 +28,7 @@
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:id="@+id/tvPropertyName"
-                          android:text="Maridadi Apartments"
+                          android:text="@string/app_name"
                           android:textStyle="bold"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -37,8 +37,8 @@
                           android:textColor="#555454"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:id="@+id/tvPropertyLocation"
-                          android:text="Kinoo, Kiambu"
+                          android:id="@+id/tvUserName"
+                          android:text="John Doe"
                           android:textStyle="normal"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -47,8 +47,8 @@
                           android:textColor="#555454"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:id="@+id/tvPropertyAddress"
-                          android:text="+254706 828 557, care@maridadiapartments.com"
+                          android:id="@+id/tvCredentials"
+                          android:text="+254706 828 557, john@bytefarm.com"
                           android:textStyle="normal"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -63,7 +63,7 @@
                           android:layout_height="wrap_content">
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:text="House No"
+                          android:text="Best Trader"
                           android:textStyle="normal"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -72,8 +72,8 @@
                           android:textColor="#555454"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:id="@+id/tvHouse"
-                          android:text="E4"
+                          android:id="@+id/tvSymbol"
+                          android:text="$ USD"
                           android:textStyle="bold"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -83,7 +83,7 @@
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:id="@+id/tvHouseTypeName"
-                          android:text="2 Bedroom, master ensuite"
+                          android:text="1$::101KShs"
                           android:textStyle="normal"
                           android:textAlignment="center"
                           android:layout_gravity="center"
@@ -112,6 +112,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:spanCount="1">
+            </androidx.recyclerview.widget.RecyclerView>
+            <View android:layout_width="wrap_content" android:background="@color/colorImportant" android:layout_height="1dp" android:layout_margin="5dp"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rates to KSH"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:textSize="6pt"
+                android:textColor="#555454"/>
+            <View android:layout_width="wrap_content" android:layout_height="5dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeTrendingExchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:spanCount="1">
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </LinearLayout>

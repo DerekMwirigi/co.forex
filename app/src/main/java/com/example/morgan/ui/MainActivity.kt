@@ -16,10 +16,6 @@ class MainActivity : AppCompatActivity() {
                 Xit.openFragment(this, HomeFragment.newInstance(), null, R.id.llMiddle)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nav_account -> {
-                Xit.openFragment(this, HomeFragment.newInstance(), "AccountFragment", R.id.llMiddle)
-                return@OnNavigationItemSelectedListener true
-            }
             R.id.nav_settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
                 return@OnNavigationItemSelectedListener true
